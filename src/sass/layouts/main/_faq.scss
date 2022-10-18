@@ -1,28 +1,19 @@
 // Руслан
 .faq {
-    padding-top: 16px;
-    @media screen and (min-width: $tablet) {
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-    @media screen and (min-width: $desktop) {
-        padding-right: 190px;
-        padding-left: 190px;
-    }
-        
-}
-
-.faq {
     &__title {
-        margin-top: 0;
-        margin-bottom: 34px;
-        padding: 0;
+        margin-bottom: 32px;
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 54px;
+        }
     }
 
     &__item {
         position: relative;
 
-        padding: 24px 44px 24px 36px;
+        display: flex;
+        align-items: center;
+        padding: 24px 44px 24px 0px;
+
     }
     &__item::before {
         content: '';
@@ -35,7 +26,6 @@
 
         background-color: rgba(255, 255, 255, 0.1);
     }
-
     &__item::after {
         content: "?";
         position: absolute;
@@ -50,25 +40,37 @@
 
         background-color: rgba(255, 255, 255, 0.1);
         font-size: 20px;
-        line-height: 70%;
+        line-height: .7;
         color: $title-text-color;
         @media screen and (min-width: $tablet) {
             right: 16px;
         }
     }
+    &__number {
+        margin-right: 16px;
+        font-family: 'Roboto Condensed';
+        font-size: 20px;
+        line-height: .7;
 
+        color: $title-text-color;
+        @media screen and (min-width: $desktop) {
+            font-size: 28px;
+            line-height: 1.25;
+        }
+    }
     &__subtitle {
         font-size: 14px;
-        line-height: 125%;
+        line-height: 1.25;
         font-weight: 400;
         @media screen and (min-width: $tablet) {
             font-size: 16px;
-            line-height: 145%;
+            line-height: 1.45;
         }
         @media screen and (min-width: $desktop) {
             font-size: 28px;
-            line-height: 125%;
+            line-height: 1.25;
             font-weight: 600;
+            color: $title-text-color;
         }
     }
 
@@ -76,6 +78,6 @@
         display: none;
 
         font-size: 10px;
-        line-height: 145%;
+        line-height: 1.5;
     }
 }
