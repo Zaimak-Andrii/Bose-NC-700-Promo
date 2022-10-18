@@ -7,16 +7,28 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    height: 650px;
+    height: 671px;
   }
 }
 
 .history__text {
   margin-bottom: 32px;
-}
 
-.test {
-  order: 3;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
+
+  &--order-1 {
+    @media screen and (min-width: $tablet) {
+      order: 1;
+    }
+  }
+
+  &--order-2 {
+    @media screen and (min-width: $tablet) {
+      order: 2;
+    }
+  }
 }
 
 // Figure
