@@ -4,8 +4,6 @@
     display: flex;
     gap: 60px;
     flex-direction: row-reverse;
-
-    justify-content: space-between;
   }
 
   @media screen and (min-width: $desktop) {
@@ -32,29 +30,10 @@
   }
 }
 
-.design .section__title {
-  padding: 0;
-  margin-bottom: 32px;
+.design__text {
+  margin-bottom: 24px;
 
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 50px;
-  }
-}
-
-.design .section__subtitle {
-  margin-bottom: 16px;
-
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 20px;
-  }
-}
-
-.design .section__text {
-  &--margin-changer {
-    margin-bottom: 24px;
-
-    @media screen and (min-width: $tablet) {
-      margin-bottom: 40px;
-    }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
   }
 }
