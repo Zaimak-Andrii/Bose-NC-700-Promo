@@ -1,1 +1,33 @@
 // Оксана
+
+.sound {
+    padding-top: 52px;
+    padding-bottom: 52px;
+}
+
+.sound-title {
+    padding: 0;
+    margin-bottom: 32px;
+    text-align: center;
+    @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    }
+}
+
+.sound__picture {
+    margin-bottom: 32px;
+}
+
+.sound__wrap {
+    @media screen and (min-width: $tablet) {
+    display: flex;
+}
+}
+
+.sound-subtitle {
+    margin-bottom: 16px;
+}
+
+.sound__description {
+    margin-bottom: 42px;
+}
