@@ -1,1 +1,178 @@
 // Володимир
+.header {
+    position: relative;
+    padding-left: 20px;
+    padding-top: 30px;
+
+
+    @media screen and (min-width:768px) {
+        padding-top: 50px;
+        padding-left: 80px;
+    }
+
+    @media screen and (min-width:1440px) {
+        padding-top: 60px;
+        padding-left: 80px;
+    }
+}
+
+.logo-menu {
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 60px;
+    }
+}
+
+
+.nav-flex {
+
+    @media screen and (min-width:1440px) {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+
+.nav-list {
+
+    display: none;
+
+    @media screen and (min-width:1440px) {
+        display: inline-flex;
+        width: 620px;
+        margin-left: 550px;
+    }
+}
+
+.nav-list__link:hover,
+.nav-list__link:focus,
+.mob-menu-list__link:hover,
+.mob-menu-list__link:focus {
+    color: $primary-color;
+}
+
+.nav-list__item:not(:last-child) {
+    @media screen and (min-width:1440px) {
+        margin-right: 77px;
+    }
+}
+
+
+.mob-menu {
+
+    padding-left: 20px;
+    padding-top: 34px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $background-color;
+    top: -2px;
+    right: 0;
+
+    z-index: 999;
+
+    @media screen and (min-width: 768px) {
+
+        height: 367px;
+        top: 18px;
+    }
+}
+
+
+.mob-menu-list {
+
+
+    @media screen and (min-width: 768px) {
+        padding-left: 60px;
+
+    }
+}
+
+.mob-menu-list__item {
+    font-size: 14px;
+    line-height: 18px;
+    line-height: 125%;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.mob-menu-list__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+
+
+
+.menu-open {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+
+    @media screen and (min-width: 768px) {
+        right: 60px;
+        top: 40px;
+    }
+
+    &:hover,
+    &:focus {
+        fill: $primary-color;
+    }
+
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+}
+
+
+
+.menu-close {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: $primary-color;
+    }
+}
+
+
+.mob-menu.is-hidden {
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
