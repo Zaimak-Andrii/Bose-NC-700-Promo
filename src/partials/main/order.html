@@ -1,37 +1,61 @@
-<section class="section order">
+<section class="section order" id="order">
     <div class="container">
-        <h2 class="order__title section__title">bose nc 700</h2>
-        <ul>
-            <li>
-                <img src="" alt="black headphones">
+        <h2 class="section__title order__title">bose nc 700</h2>
+        <ul class="order__image-list">
+            <li class="order__image-item">
+                <picture>
+                    <source srcset="./images/order/black-headphone-desktop.png 1x, ./images/order/black-headphone-desktop@2x.png 2x"
+                        media="(min-width: 1440px)">
+                    <source srcset="./images/order/black-headphone-tablet.png 1x, ./images/order/black-headphone-tablet@2x.png 2x"
+                        media="(min-width: 768px)">
+                    <source srcset="./images/order/black-headphone-mobil.png 1x, ./images/order/black-headphone-mobil@2x.png 2x"
+                        media="(max-width: 768px)">
+                    <img 
+                    class="order__image"
+                    src="./images/order/black-headphone-mobil.png" 
+                    alt="black headphone">
+                </picture>
+                
             </li>
-            <li>
-                <img src="" alt="white headphones">
+            <li class="order__image-item">
+                <picture>
+                    <source srcset="./images/order/white-headphone-desktop.png 1x, ./images/order/white-headphone-desktop@2x.png 2x"
+                        media="(min-width: 1440px)">
+                    <source srcset="./images/order/white-headphone-tablet.png 1x, ./images/order/white-headphone-tablet@2x.png 2x"
+                        media="(min-width: 768px)">
+                    <source srcset="./images/order/white-headphone-mobil.png 1x, ./images/order/white-headphone-mobil@2x.png 2x"
+                        media="(max-width: 768px)">
+                    <img 
+                    class="order__image"
+                    src="./images/order/white-headphone-mobil.png" 
+                    alt="white headphone">
+                </picture>
             </li>
         </ul>
-        <ul>
-            <li>
-                <input class="" type="radio">
+        <ul class="order__radio-list">
+            <li class="order__radio-item">
+                <input class="order__radio" type="radio">
             </li>
-            <li>
-                <input class="" type="radio">
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <p></p>
-                <button type="button"></button>
-            </li>
-            <li>
-                <p></p>
-                <button type="button"></button>
-            </li>
-            <li>
-                <p></p>
-                <button type="button"></button>
+            <li class="order__radio-item">
+                <input class="order__radio" type="radio">
             </li>
         </ul>
-        <p></p>
-        <button class="bntton" type="button"></button>
+        <ul class="order__list">
+            <li class="order__item">
+                <h3 class="order__descr">Availability in stores</h3>
+                <button class="button order__link" type="button"></button>
+            </li>
+            <li class="order__item">
+                <h3  class="order__descr">Characteristics</h3>
+                <a class="oreder__link" href="#"></a>
+            </li>
+            <li class="order__item">
+                <h3 class="order__descr">Payment and delivery methods</h3>
+                <button class="button order__link" type="button"></button>
+            </li>
+        </ul>
+        <p class="order__price">14 999 UAH</p>
+        <button class="order__button button" type="button">Заказать</button>
     </div>
+
 </section>
