@@ -1,35 +1,30 @@
 // Володимир
 .header {
     position: relative;
-    padding-left: 20px;
     padding-top: 30px;
 
 
     @media screen and (min-width:768px) {
         padding-top: 50px;
-        padding-left: 80px;
+
     }
 
     @media screen and (min-width:1440px) {
         padding-top: 60px;
-        padding-left: 80px;
+
     }
 }
 
-.logo-menu {
-    padding-bottom: 60px;
 
-    @media screen and (min-width: 768px) {
-        padding-left: 60px;
-    }
+.logo {
+    position: relative;
+    z-index: 3;
 }
-
 
 .nav-flex {
 
     @media screen and (min-width:1440px) {
-        display: flex;
-        align-items: center;
+        display: inline-flex;
     }
 
 }
@@ -43,15 +38,19 @@
     @media screen and (min-width:1440px) {
         display: inline-flex;
         width: 620px;
-        margin-left: 550px;
+        margin-left: 503px;
     }
 }
+
+
+
 
 .nav-list__link:hover,
 .nav-list__link:focus,
 .mob-menu-list__link:hover,
 .mob-menu-list__link:focus {
     color: $primary-color;
+
 }
 
 .nav-list__item:not(:last-child) {
@@ -63,7 +62,7 @@
 
 .mob-menu {
 
-    padding-left: 20px;
+
     padding-top: 34px;
     display: flex;
     flex-direction: column;
@@ -74,7 +73,7 @@
     top: -2px;
     right: 0;
 
-    z-index: 999;
+    z-index: 2;
 
     @media screen and (min-width: 768px) {
 
@@ -85,12 +84,15 @@
 
 
 .mob-menu-list {
-
+    padding-top: 60px;
+    padding-left: 20px;
 
     @media screen and (min-width: 768px) {
         padding-left: 60px;
 
     }
+
+
 }
 
 .mob-menu-list__item {
@@ -159,8 +161,8 @@
     cursor: pointer;
 
     @media screen and (min-width: 768px) {
-
-        display: none;
+        right: 60px;
+        top: 25px;
     }
 
     &:hover,
