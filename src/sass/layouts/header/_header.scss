@@ -17,10 +17,13 @@
 }
 
 .logo {
-    position: fixed;
-    z-index: 3;
-    left: 20px;
-    top: 30px;
+    @media screen and (max-width: 676px) {
+        position: fixed;
+        z-index: 3;
+        left: 20px;
+        top: 30px;
+    }
+
 
     @media screen and (min-width:768px) {
         left: 50px;
@@ -35,6 +38,8 @@
 .nav-flex {
 
     @media screen and (min-width:1440px) {
+        --padding: 80px;
+
         display: flex;
     }
 
@@ -72,7 +77,6 @@
     width: 100vw;
     height: 100vh;
 
-
     padding-top: 34px;
 
     display: flex;
@@ -82,7 +86,7 @@
     justify-content: start;
 
     @media screen and (min-width: 768px) {
-        top: 18px;
+
 
         height: 367px;
     }
@@ -170,7 +174,7 @@
 
     @media screen and (min-width: 768px) {
         right: 60px;
-        top: 30px;
+        top: 50px;
     }
 
     &:hover,
