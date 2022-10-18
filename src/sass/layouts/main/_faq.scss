@@ -1,1 +1,81 @@
 // Руслан
+.faq {
+    padding-top: 16px;
+    @media screen and (min-width: $tablet) {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-right: 190px;
+        padding-left: 190px;
+    }
+        
+}
+
+.faq {
+    &__title {
+        margin-top: 0;
+        margin-bottom: 34px;
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+
+        padding: 24px 44px 24px 36px;
+    }
+    &__item::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 2px;
+
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__item::after {
+        content: "?";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        padding: 9px 11px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        font-size: 20px;
+        line-height: 70%;
+        color: $title-text-color;
+        @media screen and (min-width: $tablet) {
+            right: 16px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 125%;
+        font-weight: 400;
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 145%;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 28px;
+            line-height: 125%;
+            font-weight: 600;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        font-size: 10px;
+        line-height: 145%;
+    }
+}
