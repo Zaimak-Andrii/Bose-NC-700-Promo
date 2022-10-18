@@ -155,4 +155,10 @@ body.scroll-lock {
   .footer__menu {
     grid-template-areas: "characteristics payment history store-addresses reviews faq";
   }
+}
+.footer__list {
+  list-style: none;
+}
+.footer__link {
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */
