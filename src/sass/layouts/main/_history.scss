@@ -1,1 +1,64 @@
-// Андрій
+.history {
+}
+.history__figure {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.history__figure-thumb {
+  @media screen and (max-width: ($tablet - 1px)) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
+}
+
+.history__figure-blockquote {
+  margin-bottom: 16px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  color: $title-text-color;
+
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 24px;
+
+    width: 34px;
+    height: 25px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.04V0h13.965v9.065C13.965 18.508 9.31 23.82 0 25v-4.957c2.352-.614 3.96-1.511 4.823-2.692.912-1.18 1.464-2.95 1.656-5.311H0ZM20.035 12.04V0H34v9.065C34 18.508 29.345 23.82 20.035 25v-4.957c2.351-.614 3.96-1.511 4.823-2.692.912-1.18 1.464-2.95 1.656-5.311h-6.48Z' fill='%23DF3D3A'/%3E%3C/svg%3E");
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 52px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+  }
+}
+
+.hostory__figure-caption {
+  font-size: 14px;
+  line-height: 1.25;
+  color: rgba($primary-text-color, 0.4);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 0.7;
+  }
+}
