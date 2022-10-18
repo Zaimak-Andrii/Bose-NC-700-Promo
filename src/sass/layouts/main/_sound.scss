@@ -1,8 +1,12 @@
 // Оксана
-
 .sound {
-    padding-top: 52px;
     padding-bottom: 52px;
+    @media screen and (min-width: $tablet) {
+    padding-bottom: 100px;
+}
+@media screen and (min-width: $desktop) {
+    padding-bottom: 170px;
+}
 }
 
 .sound-title {
@@ -14,6 +18,10 @@
     }
 }
 
+.sound__image {
+    width: 100%;
+}
+
 .sound__picture {
     margin-bottom: 32px;
 }
@@ -21,6 +29,14 @@
 .sound__wrap {
     @media screen and (min-width: $tablet) {
     display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 60px;
+}
+@media screen and (min-width: $desktop) {
+    padding-left: 190px;
+    padding-right: 208px;
+    gap: 40px;
 }
 }
 
@@ -29,5 +45,7 @@
 }
 
 .sound__description {
-    margin-bottom: 42px;
+@media screen and (max-width: 767px) {
+margin-bottom: 42px;
+}
 }
