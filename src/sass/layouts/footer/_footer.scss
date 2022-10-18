@@ -1,1 +1,24 @@
 // Ігор
+.footer{
+
+    &__menu{
+        display: grid;
+        
+        @media screen and (max-width = 1339px) {
+            grid-template-areas: 
+            "characteristics payment"
+            "history store-addresses"
+            "reviews faq" 
+            ;
+        }
+        @media screen and (min-width = $desktop) {
+            grid-template-areas: 
+            "characteristics payment history store-addresses reviews faq"
+            ;
+        }
+
+    }
+
+
+
+}
