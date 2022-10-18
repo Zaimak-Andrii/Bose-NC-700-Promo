@@ -11,7 +11,7 @@
 }
 
 .section__title {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 
   font-weight: 600;
   font-size: 24px;
@@ -26,14 +26,14 @@
   }
 
   @media screen and (min-width: $desktop) {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     font-size: 54px;
   }
 }
 
 .section__subtitle {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 
   font-weight: 600;
   font-size: 20px;
@@ -42,7 +42,7 @@
   color: $title-text-color;
 
   @media screen and (min-width: $desktop) {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 
     font-size: 28px;
   }
