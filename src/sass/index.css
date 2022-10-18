@@ -143,22 +143,59 @@ body.scroll-lock {
   }
 }
 
-.footer__menu {
-  display: grid;
+.footer {
+  display: flex;
+  justify-content: space-between;
 }
-@media screen and (max-width = 1339px) {
-  .footer__menu {
-    grid-template-areas: "characteristics payment" "history store-addresses" "reviews faq";
+@media screen and (max-width = 767px) {
+  .footer {
+    flex-direction: column;
   }
 }
-@media screen and (min-width = 1440px) {
-  .footer__menu {
-    grid-template-areas: "characteristics payment history store-addresses reviews faq";
+@media screen and (min-width = 768px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width = 1200px) {
+  .footer {
+    flex-direction: row;
   }
 }
 .footer__list {
   list-style: none;
+  display: grid;
+}
+@media screen and (max-width = 1199px) {
+  .footer__list {
+    grid-template-areas: "1 4" "2 5" "3 6";
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width = 1200px) {
+  .footer__list {
+    grid-template-areas: "1 2 3 4 5 6";
+  }
 }
 .footer__link {
-  text-decoration: none;
+  white-space: nowrap;
+}
+.footer__tel {
+  display: flexdispla;
+}
+@media screen and (max-width = 767px) {
+  .footer__tel {
+    align-items: self-start;
+  }
+}
+@media screen and (min-width = 768px) {
+  .footer__tel {
+    align-content: self-end;
+  }
+}
+@media screen and (min-width = 1200px) {
+  .footer__tel {
+    align-items: self-start;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -1,45 +1,74 @@
 // Ігор
 .footer{
 
-    &__menu{
-        
-
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width = 767px) {
+    flex-direction: column;
     }
 
+    @media screen and (min-width = 768px) {
+    flex-direction: row;
+    }
 
-
-
+    @media screen and (min-width = 1200px) {
+        flex-direction: row;
+    
+    }
 
     &__list{
         list-style: none;
         display: grid;
         
-        @media screen and (max-width = 767px) {
+        @media screen and (max-width = 1199px) {
             grid-template-areas: 
-            "characteristics payment"
-            "history store-addresses"
-            "reviews faq" 
+            "1 4"
+            "2 5"
+            "3 6" 
             ;
             grid-auto-flow: column;
             grid-auto-columns: 1fr 1fr;
 
         }
-        @media screen and (min-width = 768px) {
+        @media screen and (min-width = 1200px) {
             grid-template-areas: 
-            "characteristics payment history store-addresses reviews faq"
+            "1 2 3 4 5 6"
             ;
         }
     }
 
     &__item{
-
+        display: flex;
+        justify-content:start;
+        
 
     }
+    &__item:nth-last-child(-n + 3){
+        @media screen and (max-width = 767px) {
+            justify-content: end;
+        }
+    }
 
-&__link{
-    text-decoration: none;
-}
+    &__link{
+        white-space: nowrap;
+    }
 
+    &__text{
+        
+    }
+
+    &__tel{
+        display: flex;
+        white-space: nowrap;
+        @media screen and (max-width = 767px),
+        screen and (min-width = 1200px){
+            align-items:self-start;
+            }
+        
+            @media screen and (min-width = 768px) and (max-width = 1199px) {
+            align-items: self-end;}
+        
+    }
 
 
 }
