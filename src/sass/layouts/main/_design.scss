@@ -11,30 +11,24 @@
   @media screen and (min-width: $desktop) {
     gap: 150px;
   }
-
-  outline: 1px solid tomato;
 }
 
 .design__image {
   @media screen and (min-width: $tablet) {
     min-width: 354px;
     max-width: 354px;
+    margin-left: calc(var(--padding) * -1);
   }
   @media screen and (min-width: $desktop) {
     min-width: 590px;
     max-width: 590px;
+    margin-left: calc(var(--padding) * -1);
   }
 }
 
 .design__description-wrapper {
   @media screen and (max-width: ($tablet - 0.02px)) {
     margin-bottom: 32px;
-  }
-  @media screen and (min-width: $tablet) {
-    padding-right: 60px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-right: 190px;
   }
 }
 
