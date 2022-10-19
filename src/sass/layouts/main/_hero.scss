@@ -16,10 +16,6 @@
 }
 
 .hero__list {
-    @media screen and (min-width:$tablet) {
-        margin-left: -10px;
-    }
-
 
     @media screen and (min-width:$desktop) {
         margin-left: -110px;
@@ -121,9 +117,27 @@
 }
 
 .hero__thumb {
+
+
+    background-color: $background-color;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        margin-top: 32px;
+    }
+
+
+
+
+
+
+
+}
+
+.hero__image {
     @media screen and (min-width:$tablet) {
-        margin-left: 68px;
-        padding: 0;
+        margin-left: 60px;
+        height: 100%;
+
     }
 
     @media screen and (min-width: $desktop) {
@@ -132,9 +146,6 @@
         margin-left: calc(var(--padding) * -0.66);
     }
 
-
-
-    height: 100%;
-    width: 100%;
-    padding-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
 }
