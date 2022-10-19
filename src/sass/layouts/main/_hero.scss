@@ -1,0 +1,140 @@
+// Володимир
+.hero {
+
+    @media screen and (min-width:$desktop) {
+        margin-top: 15px;
+    }
+}
+
+.hero__flex {
+    @media screen and (min-width:$tablet) {
+        display: flex;
+    }
+
+
+
+}
+
+.hero__list {
+    @media screen and (min-width:$tablet) {
+        margin-left: -10px;
+    }
+
+
+    @media screen and (min-width:$desktop) {
+        margin-left: -110px;
+    }
+}
+
+.hero__title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.0;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #e7e7e7;
+
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width:$tablet) {
+        width: 289px;
+
+    }
+
+    @media screen and (min-width:$desktop) {
+        font-size: 74px;
+        width: 674px;
+        padding: 0;
+        margin-bottom: 86px;
+
+    }
+
+}
+
+
+.hero__description-list {
+    @media screen and (min-width:$tablet) {
+        padding-bottom: 105px;
+
+    }
+
+    @media screen and (min-width:$desktop) {}
+
+    width: 100%;
+    margin-left: auto;
+
+}
+
+.hero__description-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.hero__description-item {
+
+
+    &--first {
+        @media screen and (min-width:$tablet) {
+            width: 253px;
+        }
+
+        @media screen and (min-width:$desktop) {
+            width: 321px;
+        }
+
+        width: 222px;
+    }
+
+    &--second {
+        @media screen and (min-width:$tablet) {
+            width: 110px;
+
+        }
+
+        @media screen and (min-width:$desktop) {
+            width: 110px;
+
+        }
+
+        width: 93px;
+    }
+}
+
+.hero__description-text {
+    @media screen and (min-width:$desktop) {
+        font-size: 16px;
+
+    }
+}
+
+.hero__wrap {
+    @media screen and (min-width:$desktop) {
+
+        padding-left: 110px;
+        height: 302px;
+
+    }
+}
+
+.hero__thumb {
+    @media screen and (min-width:$tablet) {
+        margin-left: 68px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 700px;
+        max-width: 700px;
+        margin-left: calc(var(--padding) * -0.66);
+    }
+
+
+
+    height: 100%;
+    width: 100%;
+    padding-top: 32px;
+}

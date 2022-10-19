@@ -1,0 +1,10 @@
+body {
+  font-family: 'Gilroy';
+  color: rgba($primary-text-color, 0.8);
+
+  background-color: $background-color;
+}
+
+body.scroll-lock {
+  overflow: hidden;
+}
