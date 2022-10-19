@@ -1,1 +1,124 @@
 // Оля
+
+.guarantee__container {
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        } 
+}
+
+.guarantee__title {
+    @media screen and (min-width: $desktop) {
+        margin-top: 25px;
+        margin-bottom: 50px;
+}
+}
+
+// .guarantee__list {
+// list-style: none;
+// }
+
+.guarantee__item::before {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background-color: $primary-color;
+}
+
+.guarantee__subtitle {
+    @media screen and (max-width: $tablet) {
+        width: 152px;
+        }
+
+    @media screen and (min-width:$tablet) {
+        margin-bottom: 20px;
+        }
+}
+
+.guarantee__text {
+   &:not(:last-child) {
+    margin-bottom: 24px;
+    
+    @media screen and (max-width: ($tablet - 1px)) {
+        &:last-child {
+        margin-bottom: 32px;
+        }
+        }
+   }
+}
+
+ 
+    //  @media screen and (min-width: $tablet) {
+    // margin-bottom: 50px;    
+    
+    //  }
+
+    //  @media screen and (min-width: $desktop) {
+    //   margin-bottom: 69px;   
+    //   }
+      
+
+
+.guarantee__wrap-image {
+    background-color: #1d1d1d;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        margin-left: auto;
+        margin-right: auto;
+        } 
+    @media screen and (min-width: $tablet) {
+        margin-left: -60px;
+        margin-right: 60px;
+        }
+ 
+    @media screen and (min-width: $desktop) {
+        margin-left: -190px;
+        margin-right: 150px;
+        }
+}
+
+.guarantee__image {
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        } 
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+        }
+ 
+    @media screen and (min-width: $desktop) {
+        width: 590px;
+        }
+}
+
+// @media screen and (min-width: $desktop) {
+//     .guarantee__container {
+//         background-image: url(../images/guarantee-sin-desktop@2x.jpg);
+//         background-repeat: no-repeat;
+//         background-position: right;
+        
+//     }
+       
+//  }
+
+// @media screen and (min-width: $mobile) {
+
+// }
+     
+// @media screen and (min-width: $tablet) {
+     
+//  }
+ 
+// @media screen and (min-width: $desktop) {
+     
+//  }
+
+
+// $mobile: 480px;
+// $tablet: 768px;
+// $desktop: 1440px;
