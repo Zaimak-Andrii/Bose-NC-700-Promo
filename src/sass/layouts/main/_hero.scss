@@ -16,6 +16,9 @@
 }
 
 .hero__list {
+    @media screen and (min-width:$tablet) {
+        margin-left: -10px;
+    }
 
     @media screen and (min-width:$desktop) {
         margin-left: -110px;
