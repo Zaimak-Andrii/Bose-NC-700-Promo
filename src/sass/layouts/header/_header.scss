@@ -1,36 +1,42 @@
 // Володимир
 .header {
     position: relative;
+    height: 74px;
 
-    padding-top: 30px;
 
 
     @media screen and (min-width:768px) {
-        padding-top: 50px;
 
+        height: 114px;
     }
 
     @media screen and (min-width:1440px) {
-        padding-top: 60px;
+        padding-top: 50px;
 
     }
 }
 
 .logo {
-    position: absolute;
-    z-index: 3;
+
+
 
     @media screen and (max-width: 767px) {
+        position: absolute;
+        z-index: 3;
         left: 20px;
         top: 30px;
     }
 
 
-    @media screen and (min-width:768px) {
-
+    @media screen and (min-width:768px)and (max-width:1439px) {
+        position: absolute;
+        z-index: 3;
         left: 58px;
         top: 50px;
     }
+
+
+
 }
 
 .nav {
