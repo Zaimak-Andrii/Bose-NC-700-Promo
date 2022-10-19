@@ -1,1 +1,32 @@
-// Оксана
+.technology__container {
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        gap: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+        gap: 170px;
+    }
+}
+
+.technology__image {
+    @media screen and (max-width: ($tablet - 0.1px)) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        min-width: 354px;
+        margin-right: calc(var(--padding) * -1);
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 590px;
+    }
+}
+
+.technology-text {
+@media screen and (max-width: ($tablet - 0.1px)) {
+    margin-bottom: 32px;
+}
+}
