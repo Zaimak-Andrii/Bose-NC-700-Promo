@@ -1,1 +1,66 @@
 // Оксана
+
+.technology {
+    padding-bottom: 52px;
+
+    @media screen and (min-width: $tablet) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 195px;
+    }
+}
+
+.technology__container {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        gap: 60px;
+
+    }
+    @media screen and (min-width: $desktop) {
+        gap: 150px;
+    }
+}
+
+.technology__content-wrap {
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-left: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-left: 190px;
+    }
+}
+
+.technology-title {
+    margin-bottom: 32px;
+    padding: 0;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
+}
+
+.technology-subtitle {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 20px;
+    }
+}
+
+.technology__image {
+    @media screen and (min-width: $tablet) {
+        min-width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 590px;
+    }
+}
