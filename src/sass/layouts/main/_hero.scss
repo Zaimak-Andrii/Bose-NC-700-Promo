@@ -1,14 +1,17 @@
 // Володимир
+.hero {
 
+    @media screen and (min-width:$desktop) {
+        margin-top: 15px;
+    }
+}
 
 .hero__flex {
     @media screen and (min-width:$tablet) {
         display: flex;
     }
 
-    @media screen and (min-width:$desktop) {
-        padding-top: 15px;
-    }
+
 
 }
 
