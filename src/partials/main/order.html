@@ -5,42 +5,50 @@
             <ul class="order__image-list">
                 <li class="order__image-item">
                     <picture>
-                        <source srcset="./images/order/black-headphone-desktop.png 1x, ./images/order/black-headphone-desktop@2x.png 2x"
+                        <source srcset="./images/order/black-headphone-desktop.jpg 1x, ./images/order/black-headphone-desktop@2x.jpg 2x"
                             media="(min-width: 1440px)">
-                        <source srcset="./images/order/black-headphone-tablet.png 1x, ./images/order/black-headphone-tablet@2x.png 2x"
+                        <source srcset="./images/order/black-headphone-tablet.jpg 1x, ./images/order/black-headphone-tablet@2x.jpg 2x"
                             media="(min-width: 768px)">
-                        <source srcset="./images/order/black-headphone-mobil.png 1x, ./images/order/black-headphone-mobil@2x.png 2x"
+                        <source srcset="./images/order/black-headphone-mobile.jpg 1x, ./images/order/black-headphone-mobile@2x.jpg 2x"
                             media="(max-width: 768px)">
                         <img 
                         class="order__image"
-                        src="./images/order/black-headphone-mobil.png" 
+                        src="./images/order/black-headphone-mobile.jpg" 
                         alt="black headphone">
                     </picture>
                 </li>
                 <li class="order__image-item">
                     <picture>
-                        <source srcset="./images/order/white-headphone-desktop.png 1x, ./images/order/white-headphone-desktop@2x.png 2x"
+                        <source srcset="./images/order/white-headphone-desktop.jpg 1x, ./images/order/white-headphone-desktop@2x.jpg 2x"
                             media="(min-width: 1440px)">
-                        <source srcset="./images/order/white-headphone-tablet.png 1x, ./images/order/white-headphone-tablet@2x.png 2x"
+                        <source srcset="./images/order/white-headphone-tablet.jpg 1x, ./images/order/white-headphone-tablet@2x.jpg 2x"
                             media="(min-width: 768px)">
-                        <source srcset="./images/order/white-headphone-mobil.png 1x, ./images/order/white-headphone-mobil@2x.png 2x"
+                        <source srcset="./images/order/white-headphone-mobile.jpg 1x, ./images/order/white-headphone-mobile@2x.jpg 2x"
                             media="(max-width: 768px)">
                         <img 
                         class="order__image"
-                        src="./images/order/white-headphone-mobil.png" 
+                        src="./images/order/white-headphone-mobile.jpg" 
                         alt="white headphone">
                     </picture>
                 </li>
             </ul>
             <ul class="order__radio-list">
                 <li class="order__radio-item">
-                    <button class="order__radio" type="button"></button>
-                    <!-- <input class="order__radio" type="radio"> -->
+                    <input class="order__input" 
+                    type="radio" 
+                    name="color" 
+                    id="black"
+                    checked>
+                    <label class="order__label" for="black"></label>
                 </li>
                 <li class="order__radio-item">
-                    <button class="order__radio order__radio--white" type="button"></button>
-                    <!-- <label  for="white"></label>
-                    <input class="order__radio" type="radio" name="color" id="white"> -->
+                    <input class="order__input"
+                    type="radio" 
+                    name="color" 
+                    id="white">
+                    <label class="order__label order__label--white"  for="white"></label>
+                    
+                    
                 </li>
             </ul>
             <ul class="order__list">
