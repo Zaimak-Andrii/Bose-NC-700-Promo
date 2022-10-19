@@ -21,12 +21,11 @@
 
 .ability__text {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 24px;
 
   &::before {
     flex-shrink: 0;
-    display: block;
     content: '';
 
     width: 13px;
