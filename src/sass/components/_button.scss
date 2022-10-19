@@ -9,127 +9,121 @@ $purple: #6477b9;
 $blue: #0eb7da;
 
 .button {
-    width: 100%;
+  width: 100%;
 
-    padding-top: 19px;
-    padding-bottom: 19px;
+  padding-top: 19px;
+  padding-bottom: 19px;
 
-    font-style: 600;
-    font-size: 16px;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
+  font-style: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
 
+  @media screen and (min-width: 1440px) {
+    width: 400px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
 
+  &--primary {
+    color: $primary-text-color;
 
+    background-color: $primary-color;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      rgba($primary-color, 1) 50%
+    );
+    transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
+      color 0.5s ease 0s, background-color 0.5s ease;
 
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba($primary-color, 1);
+      background-position: -100% 100%;
+    }
+  }
 
+  &--secondary {
+    .draw {
+      transition: color 0.25s;
 
-    @media screen and (min-width:1440px) {
+      &::before,
+      &::after {
+        // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
 
-        padding-top: 22px;
-        padding-bottom: 21px;
+      // This covers the top & right borders (expands right, then down)
+      &::before {
+        top: 0;
+        left: 0;
+      }
 
-        width: 400px;
+      // And this the bottom & left borders (expands left, then up)
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+
+      &:hover {
+        color: $cyan;
+      }
+
+      // Hover styles
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover::before {
+        border-top-color: $cyan; // Make borders visible
+        border-right-color: $cyan;
+        transition: width 0.25s ease-out,
+          // Width expands first
+          height 0.25s ease-out 0.25s; // And then height
+      }
+
+      &:hover::after {
+        border-bottom-color: $cyan; // Make borders visible
+        border-left-color: $cyan;
+        transition: border-color 0s ease-out 0.5s,
+          // Wait for ::before to finish before showing border
+          width 0.25s ease-out 0.5s,
+          // And then exanding width
+          height 0.25s ease-out 0.75s; // And finally height
+      }
     }
 
+    .meet {
+      &:hover {
+        color: $yellow;
+      }
 
+      // Start ::after in same position as ::before
+      &::after {
+        top: 0;
+        left: 0;
+      }
 
-    &--primary {
-        color: $primary-text-color;
+      // Change colors
+      &:hover::before {
+        border-top-color: $yellow;
+        border-right-color: $yellow;
+      }
 
-        background-color: $primary-color;
-        background-size: 200% 100%;
-        background-image: linear-gradient(to right, transparent 50%, rgba($primary-color, 1) 50%);
-        transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
-
-        &:hover,
-        &:focus {
-            color: rgba(255, 255, 255, 1);
-            background-color: rgba($primary-color, 1);
-            background-position: -100% 100%;
-        }
+      &:hover::after {
+        border-bottom-color: $yellow;
+        border-left-color: $yellow;
+        transition: // Animate height first, then width
+          height 0.25s ease-out, width 0.25s ease-out 0.25s;
+      }
     }
-
-    &--secondary {
-        .draw {
-            transition: color 0.25s;
-
-            &::before,
-            &::after {
-                // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
-                border: 2px solid transparent;
-                width: 0;
-                height: 0;
-            }
-
-            // This covers the top & right borders (expands right, then down)
-            &::before {
-                top: 0;
-                left: 0;
-            }
-
-            // And this the bottom & left borders (expands left, then up)
-            &::after {
-                bottom: 0;
-                right: 0;
-            }
-
-            &:hover {
-                color: $cyan;
-            }
-
-            // Hover styles
-            &:hover::before,
-            &:hover::after {
-                width: 100%;
-                height: 100%;
-            }
-
-            &:hover::before {
-                border-top-color: $cyan; // Make borders visible
-                border-right-color: $cyan;
-                transition:
-                    width 0.25s ease-out, // Width expands first
-                    height 0.25s ease-out 0.25s; // And then height
-            }
-
-            &:hover::after {
-                border-bottom-color: $cyan; // Make borders visible
-                border-left-color: $cyan;
-                transition:
-                    border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
-                    width 0.25s ease-out 0.5s, // And then exanding width
-                    height 0.25s ease-out 0.75s; // And finally height
-            }
-        }
-
-        .meet {
-
-            &:hover {
-                color: $yellow;
-            }
-
-            // Start ::after in same position as ::before
-            &::after {
-                top: 0;
-                left: 0;
-            }
-
-            // Change colors
-            &:hover::before {
-                border-top-color: $yellow;
-                border-right-color: $yellow;
-            }
-
-            &:hover::after {
-                border-bottom-color: $yellow;
-                border-left-color: $yellow;
-                transition: // Animate height first, then width
-                    height 0.25s ease-out,
-                    width 0.25s ease-out 0.25s;
-            }
-
-        }
-    }
+  }
 }
