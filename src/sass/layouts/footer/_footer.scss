@@ -9,25 +9,19 @@
     @media screen and (max-width: 320px) {
         width: 280;
         padding-bottom: 52px;
-        // padding-left: 18px;
-        // padding-right: 20px;
-        }
+         }
     @media screen and (max-width: ($tablet - 1)) {
         flex-direction: column;
         height: 207px;
         padding-bottom: 52px;
-        // padding-left: 18px;
-        // padding-right: 20px;
-    }
+   }
 
     @media screen and (min-width: $tablet) {
         flex-direction: row;
         width: 648px;
         height: 152px;
         padding-bottom: 50px;
-        // padding-left: 60px;
-        // padding-right: 60px;
-    }
+   }
 
     @media screen and (min-width: $desktop) {
         width: 1170px;
@@ -35,8 +29,6 @@
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 74px;
-        // padding-left: 190px;
-        // padding-right: 80px;
     }
 
     &__list{
@@ -56,18 +48,14 @@
             row-gap: 24px;
 
             @media screen and (max-width: $mobile) {
-                maxwidth: 412px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 52px;
+                max-width: 100%;
+                 margin-bottom: 52px;
                 row-gap: 24px;
             }
 
             @media screen and (max-width: ($tablet - 1)) {
-                width: 412px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 52px;
+                max-width: 100%;
+                 margin-bottom: 52px;
                 row-gap: 24px;
             }
         }
@@ -84,7 +72,6 @@
     &__item{
         display: flex;
         justify-content:start;
-        
     }
     &__item:nth-last-child(-n + 3){
         @media screen and (max-width: ($tablet - 1)) {
@@ -108,10 +95,7 @@
         
         @media screen and (max-width: ($tablet - 1)){
             align-items:self-start;
-            width: 412px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+         }
     
         @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
             align-items: self-end;
@@ -123,9 +107,7 @@
             height: 22px;
             justify-content: end;
             align-items:center;
-
         }
-    
     }
     
     &__tel-text{
@@ -138,6 +120,5 @@
             line-height: 1.88;
             color: rgba(255, 255, 255, 0.8);
             align-items: center;
-            
     }
 }
