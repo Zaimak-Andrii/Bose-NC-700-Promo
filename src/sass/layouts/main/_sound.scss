@@ -1,1 +1,36 @@
-// Оксана
+.sound-title {
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+    text-align: end;
+    }
+    @media screen and (min-width: $desktop) {
+    margin-right: -110px;    
+}
+}
+
+.sound__picture {
+    margin-bottom: 32px;
+    @media screen and (min-width: $tablet) {
+    margin-left: calc(var(--padding)* -1);
+    margin-right: calc(var(--padding)* -1);
+    }
+    @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+}
+}
+
+.sound__wrap {
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 60px;
+}
+@media screen and (min-width: $desktop) {
+    gap: 40px;
+}
+}
+
+.sound__description:not(:last-child) {
+@media screen and (max-width: 767px) {
+margin-bottom: 42px;
+}
+}
