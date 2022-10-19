@@ -1,1 +1,39 @@
 // Денис
+.design__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 60px;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 150px;
+  }
+}
+
+.design__image {
+  @media screen and (min-width: $tablet) {
+    min-width: 354px;
+    max-width: 354px;
+    margin-left: calc(var(--padding) * -1);
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 590px;
+    max-width: 590px;
+    margin-left: calc(var(--padding) * -1);
+  }
+}
+
+.design__description-wrapper {
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    margin-bottom: 32px;
+  }
+}
+
+.design__text {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
