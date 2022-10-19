@@ -7,9 +7,8 @@
     justify-content: space-between;
 
     @media screen and (max-width: 320px) {
-        width: 280;
         padding-bottom: 52px;
-         }
+    }
     @media screen and (max-width: ($tablet - 1)) {
         flex-direction: column;
         height: 207px;
@@ -100,7 +99,6 @@
         @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
             align-items: self-end;
         }
-        
         
         @media screen and (min-width: $desktop){
             width: 100%;
