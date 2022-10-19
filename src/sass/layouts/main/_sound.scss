@@ -1,30 +1,19 @@
-// Оксана
-// .sound {
-//     padding-bottom: 52px;
-
-//     @media screen and (min-width: $tablet) {
-//     padding-bottom: 100px;
-// }
-//     @media screen and (min-width: $desktop) {
-//     padding-bottom: 170px;
-// }
-// }
-
 .sound-title {
-    // padding: 0;
-    // margin-bottom: 32px;
     text-align: center;
-    // @media screen and (min-width: $desktop) {
-    // margin-bottom: 50px;
-    // }
+    @media screen and (min-width: $tablet) {
+    text-align: end;
+    }
+    @media screen and (min-width: $desktop) {
+    margin-right: -80px;    
 }
-
-.sound__image {
-    width: 100%;
 }
 
 .sound__picture {
     margin-bottom: 32px;
+    @media screen and (min-width: $tablet) {
+    margin-left: calc(var(--padding)* -1);
+    margin-right: calc(var(--padding)* -1);
+    }
     @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
 }
@@ -33,22 +22,14 @@
 .sound__wrap {
     @media screen and (min-width: $tablet) {
     display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
     gap: 60px;
 }
 @media screen and (min-width: $desktop) {
-    padding-left: 190px;
-    padding-right: 208px;
     gap: 40px;
 }
 }
 
-.sound-subtitle {
-    margin-bottom: 16px;
-}
-
-.sound__description {
+.sound__description:not(:last-child) {
 @media screen and (max-width: 767px) {
 margin-bottom: 42px;
 }
