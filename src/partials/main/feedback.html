@@ -1,3 +1,66 @@
 <section>
+    <div class="feedback container">
+        <div class="feedback__header">
+            <h2 class="feedback__title">Feedback</h2>
+            <p class="subtitle">We'll help you find the right headphones for you.</p>
+        </div>
 
+        <!-- Feedback form -->
+        <div class="feedback-form__cover">
+                <form class="feedback-form">
+                  <ul class="feedback-form__list">
+                    <li class="feedback-form__item">
+                      <label class="feedback-form__label">
+                        <span>Your name</span>
+                        <input class="field field__name" type="text" />
+                      </label>
+                    </li>
+                    <li class="feedback-form__item">
+                      <label class="feedback-form__label">
+                        <span>Your e-mail</span>
+                        <input class="field field__email" type="email" />
+                      </label>
+                    </li>
+                    <li class="feedback-form__item">
+                      <label class="feedback-form__label">
+                        <span>Send us a message</span>
+                        <textarea
+                          class="field field__comment"
+                          name="comment"
+                          resize
+                          ></textarea>
+                          <!-- placeholder="Введіть текст" -->
+                      </label>
+                    </li>
+                  </ul>
+                  <!-- <div class="accept"> -->
+                  <label class="offer">
+                    <input
+                      class="offer__checkbox"
+                      type="checkbox"
+                      name="offer"
+                      placeholder="offer"
+                    />
+                    <svg class="offer__icon">
+                      <use href="./images/icons.svg#checkbox"></use>
+                    </svg>
+                    <div class="offer__text">
+                      <span>I agree to the</span>
+                      <a
+                        class="offer__link"
+                        href=""
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <span> privacy policy</span>
+                      </a>
+                    </div>
+                  </label>
+                  <button class="feedback-form__btn" type="submit">
+                    <b class="feedback-form__btn-title"> SEND </b>
+                  </button>
+                </form>
+        </div>
+
+    </div>
 </section>
