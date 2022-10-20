@@ -17,7 +17,7 @@
                         alt="black headphone">
                     </picture>
                 </li>
-                <li class="order__image-item">
+                <li class="order__image-item is-hidden" data-modal>
                     <picture>
                         <source srcset="./images/order/white-headphone-desktop.jpg 1x, ./images/order/white-headphone-desktop@2x.jpg 2x"
                             media="(min-width: 1440px)">
@@ -40,7 +40,7 @@
                     id="black"
                     value="black"
                     checked>
-                    <label class="order__label" for="black"></label>
+                    <label class="order__label" for="black" data-modal-close></label>
                 </li>
                 <li class="order__radio-item">
                     <input class="order__input"
@@ -48,7 +48,7 @@
                     name="color" 
                     id="white"
                     value="white">
-                    <label class="order__label order__label--white"  for="white"></label>
+                    <label class="order__label order__label--white" for="white"  data-modal-open></label>
                     
                     
                 </li>
@@ -80,7 +80,7 @@
                 </li>
             </ul>
             <p class="order__price">14 999 UAH</p>
-            <button class="order__button button" type="button">Order</button>
+            <button class="button--primary button" type="button">Order</button>
         </div>
     </div>
 
