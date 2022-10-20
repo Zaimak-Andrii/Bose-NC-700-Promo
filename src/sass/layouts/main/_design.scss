@@ -12,6 +12,10 @@
 }
 
 .design__image {
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    margin: 0 auto;
+  }
+
   @media screen and (min-width: $tablet) {
     min-width: 354px;
     max-width: 354px;
