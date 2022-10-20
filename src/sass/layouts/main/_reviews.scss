@@ -46,17 +46,8 @@
   height: 100%;
 }
 
-.reviews__text {
-  padding-right: 22px;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: $tablet) {
-    padding-right: 118px;
-  }
-
+.reviews__title {
   @media screen and (min-width: $desktop) {
-    margin-bottom: 70px;
-    padding-right: 0px;
     max-width: 258px;
   }
 }
@@ -69,58 +60,66 @@
   }
 }
 
-.reviews__title {
-  @media screen and (min-width: $desktop) {
-    max-width: 258px;
+.reviews__text {
+  padding-right: 22px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: $tablet) {
+    padding-right: 118px;
   }
-}
-.reviews__slider-place {
+
   @media screen and (min-width: $desktop) {
+    margin-bottom: 66px;
+    padding-right: 0px;
     max-width: 258px;
   }
 }
 
-// .reviews__toggle-label {
-//   &:not(:first-child):before {
-//     content: '-';
-//   }
-// }
-.reviews--slider-number {
+.reviews__slider-holder {
+  display: flex;
+}
+
+.reviews__toggle-label {
+  display: flex;
+}
+
+.reviews__slider-number {
   font-family: 'Roboto Condensed';
   font-size: 20px;
   line-height: 1.25;
+  color: #df3d3a;
   opacity: 0.2;
 
-  //   &:not(:first-child):before {
-  //     content: '-';
-  //   }
-
-  //   @media screen and (min-width: $desktop) {
-  //     font-size: 28px;
-  //   }
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+  }
 }
 
-.rievews__slider-toggle--first-is-chosen:checked + .reviews__toggle-label,
-.rievews__slider-toggle--second-is-chosen:checked + .reviews__toggle-label,
-.rievews__slider-toggle--third-is-chosen:checked + .reviews__toggle-label,
-.rievews__slider-toggle--forth-is-chosen:checked + .reviews__toggle-label {
+.reviews__slider-number--prefixed {
+  &::before {
+    content: '–';
+    margin-left: 20px;
+    margin-right: 14px;
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.rievews__slider-toggle:checked + .reviews__slider-number {
   color: #df3d3a;
+  opacity: 1;
 }
 
-// .rievews__slider-toggle--first-is-chosen:checked + .reviews--slider-number,
-// .rievews__slider-toggle--second-is-chosen:checked + .reviews--slider-number,
-// .rievews__slider-toggle--third-is-chosen:checked + .reviews--slider-number,
-// .rievews__slider-toggle--forth-is-chosen:checked + .reviews--slider-number {
-//   color: #df3d3a;
-// }
-
-// .rievews__slider-toggle {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.rievews__slider-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
