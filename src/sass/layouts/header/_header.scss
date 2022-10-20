@@ -97,10 +97,11 @@
   height: 40px;
   margin-left: auto;
 
-  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &--open {
-  }
+  background: none;
 
   @media screen and (min-width: $desktop) {
     display: none;
