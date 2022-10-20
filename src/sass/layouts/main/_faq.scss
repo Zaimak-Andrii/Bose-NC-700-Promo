@@ -1,19 +1,15 @@
 // Руслан
 .faq {
-    &__title {
-        margin-bottom: 32px;
-        @media screen and (min-width: $desktop) {
-            margin-bottom: 54px;
-        }
-    }
-
     &__item {
         position: relative;
 
-        display: flex;
-        align-items: center;
         padding: 24px 44px 24px 0px;
-
+        @media screen and (min-width: $tablet) {
+            padding: 24px 92px 24px 0px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding: 24px 102px 24px 0px;
+        }
     }
     &__item::before {
         content: '';
@@ -26,18 +22,19 @@
 
         background-color: rgba(255, 255, 255, 0.1);
     }
-    &__item::after {
+    &__label-wrapper::after {
         content: "?";
         position: absolute;
-        top: 50%;
+        top: 33px;
         right: 0;
         transform: translateY(-50%);
-
+        
         padding: 9px 11px;
         width: 32px;
         height: 32px;
         border-radius: 50%;
 
+        cursor: pointer;
         background-color: rgba(255, 255, 255, 0.1);
         font-size: 20px;
         line-height: .7;
@@ -45,6 +42,11 @@
         @media screen and (min-width: $tablet) {
             right: 16px;
         }
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
     }
     &__number {
         margin-right: 16px;
@@ -54,6 +56,7 @@
 
         color: $title-text-color;
         @media screen and (min-width: $desktop) {
+            margin-right: 32px;
             font-size: 28px;
             line-height: 1.25;
         }
@@ -73,11 +76,43 @@
             color: $title-text-color;
         }
     }
+    &__content-wrapper {
+        max-height: 0;
+        overflow: hidden;
 
-    &__content {
-        display: none;
-
-        font-size: 10px;
-        line-height: 1.5;
+        transition: max-height 350ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+    &__content {
+        padding-top: 16px;
+        padding-left: 36px;
+
+        font-size: 12px;
+        line-height: 1.45;
+
+            color: rgba(255, 255, 255, 0.8);
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-left: 60px;
+
+            font-size: 20px;
+        }
+    }
+    &__checkbox {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+}
+
+.faq__checkbox:checked + .faq__content-wrapper {
+    max-height: 100vh;
 }
