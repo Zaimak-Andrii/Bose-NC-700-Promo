@@ -1,75 +1,62 @@
-<section>
+<section class="section feedback">
+  <div class=" container">
+    <div class="feedback__thumb">
+      <picture>
+        <source srcset="
+                        ./images/feedback-mobile.jpg    1x,
+                        ./images/feedback-mobile@2x.jpg 2x
+                      " type="image/jpeg" media="(max-width: 767px)" />
+        <source srcset="
+                        ./images/feedback-desktop.jpg    1x,
+                        ./images/feedback-desktop@2x.jpg 2x
+                      " type="image/jpeg" media="(min-width: 1440px)" />
+        <source srcset="
+                        ./images/feedback-tablet.jpg    1x,
+                        ./images/feedback-tablet@2x.jpg 2x
+                      " type="image/jpeg" media="(min-width: 768px)" />
 
-  <div class="feedback__background"></div>
-    <div class="feedback container">
-    
-        <div class="feedback__header">
-            <h2 class="section__title">Feedback</h2>
-            <p class="section__text feedback__text">We'll help you find the right headphones for you.</p>
-        </div>
+        <img class="feedback__image" src="./images/feedback-desktop@2x.jpg" alt="Woman in branded headphones works" />
+      </picture>
+    </div>
 
-        <!-- Feedback form -->
-        <div class="feedback-form__cover">
-                <form class="feedback-form">
-                  <ul class="feedback-form__list">
-                    <li class="feedback-form__item">
-                      <label class="feedback-form__label">
-                        <input 
-                          class="feedback-field feedback-field__name" 
-                          type="text" 
-                          placeholder="Your name" 
-                          />
-                      </label>
-                    </li>
-                    <li class="feedback-form__item">
-                      <label class="feedback-form__label">
-                        <input 
-                        class="feedback-field feedback-field__email" 
-                        type="email" 
-                        placeholder="Your e-mail" 
-                        />
-                      </label>
-                    </li>
-                    <li class="feedback-form__item">
-                      <label class="feedback-form__label">
-                        <span></span>
-                        <textarea
-                          class="feedback-field feedback-field__comment"
-                          name="comment"
-                          resize
-                          placeholder="Send us a message"
-                          ></textarea>
-                      </label>
-                    </li>
-                  </ul>
-                  <!-- <div class="accept"> -->
-                  <label class="feedback-offer">
-                    <input
-                      class="feedback-offer__checkbox"
-                      type="checkbox"
-                      name="feedback-offer"
-                      placeholder="feedback-offer"
-                    />
-                    <svg class="feedback-offer__icon">
-                      <use href="./images/feedback.svg#checkbox"></use>
-                    </svg>
-                    <div class="feedback-offer__text">
-                      <span>I agree to the</span>
-                      <a
-                        class="feedback-offer__link"
-                        href="#"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        <span> privacy policy</span>
-                      </a>
-                    </div>
-                  </label>
-                  <button class="button button--secondary feedback-form__button" type="submit">
-                    SEND
-                  </button>
-                </form>
-        </div>
+    <div class="feedback__wrapper">
+
+      <div class="feedback__text-wrapper">
+        <h2 class="section__title">Feedback</h2>
+        <p class="section__subtitle feedback__subtitle">We'll help you find the right headphones for you.</p>
+      </div>
+
+
+      <form class="feedback-form">
+        <label class="feedback-form__label">
+          <input class="feedback-form__input" type="text" placeholder="Your name" />
+        </label>
+
+        <label class="feedback-form__label">
+          <input class="feedback-form__input" type="email" placeholder="Your e-mail" />
+        </label>
+
+        <label class="feedback-form__label">
+          <textarea class="feedback-form__area" name="comment" placeholder="Send us a message"></textarea>
+        </label>
+
+        <label class="feedback-form__label feedback-form__checkbox">
+          <input class="feedback-form__checkbox-input" type="checkbox" name="policy">
+          <span class="feedback-form__checkbox-check"></span>
+          <span class="feedback-form__label-text">
+            I agree to the
+            <a class="feedback-form__policy-link" href="#" rel="noreferrer noopener">
+              privacy policy
+            </a>
+          </span>
+        </label>
+
+        <button class="button button--secondary feedback-form__button" type="submit">
+          send
+        </button>
+      </form>
 
     </div>
+
+  </div>
 </section>
