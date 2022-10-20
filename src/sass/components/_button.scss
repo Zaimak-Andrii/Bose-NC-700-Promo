@@ -1,0 +1,120 @@
+$primary-hover-bg: #b5302d;
+
+.button {
+  width: 100%;
+
+  padding-top: 19px;
+  padding-bottom: 19px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  color: rgba($primary-text-color, 0.9);
+
+  @media screen and (min-width: $tablet) {
+    width: 294px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 400px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+
+    font-size: 20px;
+    line-height: calc(25 / 20);
+  }
+}
+
+.button--primary {
+  background-color: $primary-color;
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba($primary-hover-bg, 1) 50%
+  );
+  transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
+    color 0.5s ease 0s, background-color 0.5s ease;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba($primary-hover-bg, 1);
+    background-position: -100% 100%;
+  }
+}
+
+.button--secondary {
+  $secondary-border-color: rgba($primary-text-color, 0.8);
+
+  position: relative;
+
+  padding-top: 20px;
+  padding-bottom: 18px;
+
+  background: none;
+  border: 0;
+
+  box-shadow: inset 0 0 0 1px $primary-color;
+  transition: color 0.25s;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border: 1px solid transparent;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    color: $primary-hover-bg;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $secondary-border-color;
+    border-right-color: $secondary-border-color;
+
+    transition: width 0.25s ease-out,
+      // Width expands first
+      height 0.25s ease-out 0.25s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $secondary-border-color;
+    border-left-color: $secondary-border-color;
+
+    transition: // Animate height first, then width
+      height 0.25s ease-out, width 0.25s ease-out 0.25s;
+  }
+}

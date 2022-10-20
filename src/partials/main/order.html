@@ -1,3 +1,87 @@
-<section>
+<section class="section order" id="order">
+    <div class="container order__container">
+        <h2 class="section__title order__title">bose nc 700</h2>
+        <div class="order__wrapper">
+            <ul class="order__image-list">
+                <li class="order__image-item">
+                    <picture>
+                        <source srcset="./images/order/black-headphone-desktop.jpg 1x, ./images/order/black-headphone-desktop@2x.jpg 2x"
+                            media="(min-width: 1440px)">
+                        <source srcset="./images/order/black-headphone-tablet.jpg 1x, ./images/order/black-headphone-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source srcset="./images/order/black-headphone-mobile.jpg 1x, ./images/order/black-headphone-mobile@2x.jpg 2x"
+                            media="(max-width: 768px)">
+                        <img 
+                        class="order__image"
+                        src="./images/order/black-headphone-mobile.jpg" 
+                        alt="black headphone">
+                    </picture>
+                </li>
+                <li class="order__image-item is-hidden" data-modal>
+                    <picture>
+                        <source srcset="./images/order/white-headphone-desktop.jpg 1x, ./images/order/white-headphone-desktop@2x.jpg 2x"
+                            media="(min-width: 1440px)">
+                        <source srcset="./images/order/white-headphone-tablet.jpg 1x, ./images/order/white-headphone-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source srcset="./images/order/white-headphone-mobile.jpg 1x, ./images/order/white-headphone-mobile@2x.jpg 2x"
+                            media="(max-width: 768px)">
+                        <img 
+                        class="order__image"
+                        src="./images/order/white-headphone-mobile.jpg" 
+                        alt="white headphone">
+                    </picture>
+                </li>
+            </ul>
+            <ul class="order__radio-list">
+                <li class="order__radio-item">
+                    <input class="order__input" 
+                    type="radio" 
+                    name="color" 
+                    id="black"
+                    value="black"
+                    checked>
+                    <label class="order__label" for="black" data-modal-close></label>
+                </li>
+                <li class="order__radio-item">
+                    <input class="order__input"
+                    type="radio" 
+                    name="color" 
+                    id="white"
+                    value="white">
+                    <label class="order__label order__label--white" for="white"  data-modal-open></label>
+                    
+                    
+                </li>
+            </ul>
+            <ul class="order__list">
+                <li class="order__item">
+                    <h3 class="order__descr">Availability in stores</h3>
+                    <button class="order__link" type="button">
+                        <svg class="order__icon">
+                            <use href="./images/icons.svg#icon-arrow"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="order__item">
+                    <h3  class="order__descr">Characteristics</h3>
+                    <a class="oreder__link" href="#сharacteristics">
+                        <svg class="order__icon">
+                            <use href="./images/icons.svg#icon-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="order__item">
+                    <h3 class="order__descr">Payment and delivery methods</h3>
+                    <button class="order__link" type="button">
+                        <svg class="order__icon">
+                            <use href="./images/icons.svg#icon-arrow"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <p class="order__price">14 999 UAH</p>
+            <button class="button--primary button" type="button">Order</button>
+        </div>
+    </div>
 
 </section>
