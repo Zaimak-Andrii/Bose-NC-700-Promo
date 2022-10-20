@@ -3,12 +3,15 @@
     &__item {
         position: relative;
 
-        padding: 24px 44px 24px 0px;
+        padding: 24px 0px 24px 0px;
+        // 44
         @media screen and (min-width: $tablet) {
-            padding: 24px 92px 24px 0px;
+            padding: 24px 16px 24px 0px;
+            // 92
         }
         @media screen and (min-width: $desktop) {
-            padding: 24px 102px 24px 0px;
+            padding: 24px 16px 24px 0px;
+            // 102
         }
     }
     &__item::before {
@@ -22,14 +25,13 @@
 
         background-color: rgba(255, 255, 255, 0.1);
     }
-    &__label-wrapper::after {
+    &__label::after {
         content: "?";
-        position: absolute;
-        top: 33px;
-        right: 0;
-        transform: translateY(-50%);
-        
-        padding: 9px 11px;
+        margin-left: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -39,9 +41,10 @@
         font-size: 20px;
         line-height: .7;
         color: $title-text-color;
-        @media screen and (min-width: $tablet) {
-            right: 16px;
-        }
+        @media screen and (min-width: $desktop) {
+            width: 42px;
+            height: 42px;
+        } 
     }
     &__label {
         display: flex;
