@@ -3,55 +3,39 @@ $caubic: cubic-bezier(0.4, 0, 0.2, 1);
 $wait: 250ms;
 
 .header {
-    position: relative;
-    height: 74px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 
 
     @media screen and (min-width:768px) {
-
-        height: 114px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (min-width:1440px) {
         padding-top: 50px;
-
+        padding-bottom: 50px;
     }
 }
 
-.logo {
 
-
-
-    @media screen and (max-width: 767px) {
-        position: absolute;
-        z-index: 3;
-        left: 20px;
-        top: 30px;
-    }
-
-
-    @media screen and (min-width:768px)and (max-width:1439px) {
-        position: absolute;
-        z-index: 3;
-        left: 58px;
-        top: 50px;
-    }
-
-
-
-}
 
 .nav {
     margin-left: auto;
 }
 
 .nav-flex {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (min-width:1440px) {
         --padding: 80px;
 
-        display: flex;
+
     }
 
 }
@@ -89,32 +73,39 @@ $wait: 250ms;
     width: 100vw;
     height: 100vh;
 
-    padding-top: 34px;
 
-    display: flex;
-    flex-direction: column;
+
+
     background-color: $background-color;
 
-    justify-content: start;
+
 
     @media screen and (min-width: 768px) {
-
-
         box-shadow: 0px 20px 80px #000000;
         height: 367px;
     }
 }
 
+.responsive {
+    padding-top: 26px;
 
-.mob-menu-list {
-    padding-top: 60px;
-    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (min-width: 768px) {
-        margin-top: 34px;
-        padding-left: 60px;
-
+        padding-top: 46px;
     }
+}
+
+.mob-menu-list {
+    --padding: 40px;
+    padding-top: 60px;
+
+
+
+    @media screen and (min-width: 768px) {}
 
 
 }
@@ -137,26 +128,25 @@ $wait: 250ms;
 
 
 .menu-open {
-    position: absolute;
-    right: 15px;
-    top: 32px;
+
 
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-left: auto;
 
 
     background-color: transparent;
 
     border: none;
-    margin-left: auto;
+
     cursor: pointer;
 
 
     @media screen and (min-width: 768px) {
-        right: 60px;
-        top: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
@@ -174,30 +164,27 @@ $wait: 250ms;
 
 
 .menu-close {
-    position: absolute;
-    right: 15px;
-    top: 30px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto;
+
 
     background-color: transparent;
-    color: #212121;
+
     border: none;
-    margin-left: auto;
+
     cursor: pointer;
 
-    @media screen and (min-width: 768px) {
-        right: 60px;
-        top: 50px;
-    }
+
 
     &:hover,
     &:focus {
         fill: $primary-color;
     }
 }
+
+
 
 .nav-list__link {
     transition: color $wait $caubic;
