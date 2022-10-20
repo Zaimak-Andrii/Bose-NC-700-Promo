@@ -1,8 +1,8 @@
 <section>
     <div class="feedback container">
         <div class="feedback__header">
-            <h2 class="feedback__title">Feedback</h2>
-            <p class="subtitle">We'll help you find the right headphones for you.</p>
+            <h2 class="section__title">Feedback</h2>
+            <p class="section__text feedback__text">We'll help you find the right headphones for you.</p>
         </div>
 
         <!-- Feedback form -->
@@ -12,20 +12,20 @@
                     <li class="feedback-form__item">
                       <label class="feedback-form__label">
                         <span>Your name</span>
-                        <input class="field field__name" type="text" />
+                        <input class="feedback-field feedback-field__name" type="text" />
                       </label>
                     </li>
                     <li class="feedback-form__item">
                       <label class="feedback-form__label">
                         <span>Your e-mail</span>
-                        <input class="field field__email" type="email" />
+                        <input class="feedback-field feedback-field__email" type="email" />
                       </label>
                     </li>
                     <li class="feedback-form__item">
                       <label class="feedback-form__label">
                         <span>Send us a message</span>
                         <textarea
-                          class="field field__comment"
+                          class="feedback-field feedback-field__comment"
                           name="comment"
                           resize
                           ></textarea>
@@ -34,20 +34,20 @@
                     </li>
                   </ul>
                   <!-- <div class="accept"> -->
-                  <label class="offer">
+                  <label class="feedback-offer">
                     <input
-                      class="offer__checkbox"
+                      class="feedback-offer__checkbox"
                       type="checkbox"
-                      name="offer"
-                      placeholder="offer"
+                      name="feedback-offer"
+                      placeholder="feedback-offer"
                     />
-                    <svg class="offer__icon">
+                    <svg class="feedback-offer__icon">
                       <use href="./images/icons.svg#checkbox"></use>
                     </svg>
-                    <div class="offer__text">
+                    <div class="feedback-offer__text">
                       <span>I agree to the</span>
                       <a
-                        class="offer__link"
+                        class="feedback-offer__link"
                         href=""
                         target="_blank"
                         rel="noreferrer noopener"
@@ -56,7 +56,7 @@
                       </a>
                     </div>
                   </label>
-                  <button class="feedback-form__btn" type="submit">
+                  <button class="button-seconary" type="submit">
                     <b class="feedback-form__btn-title"> SEND </b>
                   </button>
                 </form>
