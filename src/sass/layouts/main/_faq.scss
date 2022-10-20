@@ -4,14 +4,8 @@
         position: relative;
 
         padding: 24px 0px 24px 0px;
-        // 44
         @media screen and (min-width: $tablet) {
             padding: 24px 16px 24px 0px;
-            // 92
-        }
-        @media screen and (min-width: $desktop) {
-            padding: 24px 16px 24px 0px;
-            // 102
         }
     }
     &__item::before {
@@ -32,7 +26,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 32px;
+        min-width: 32px;
         height: 32px;
         border-radius: 50%;
 
@@ -68,6 +62,7 @@
         font-size: 14px;
         line-height: 1.25;
         font-weight: 400;
+        margin-right: 10px;
         @media screen and (min-width: $tablet) {
             font-size: 16px;
             line-height: 1.45;
