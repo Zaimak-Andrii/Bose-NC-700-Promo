@@ -90,7 +90,6 @@
 }
 
 .history__figure-thumb {
-  display: block;
   @media screen and (min-width: $tablet) {
     flex-shrink: 0;
     margin-bottom: 0;
@@ -110,7 +109,6 @@
 
 // Blockquote
 .history__figure-wrapper {
-  display: block;
   @media screen and (min-width: $tablet) {
     padding-right: var(--padding);
   }
