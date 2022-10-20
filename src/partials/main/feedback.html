@@ -20,19 +20,22 @@
                     </li>
                     <li class="feedback-form__item">
                       <label class="feedback-form__label">
-                        <span>Your e-mail</span>
-                        <input class="feedback-field feedback-field__email" type="email" />
+                        <input 
+                        class="feedback-field feedback-field__email" 
+                        type="email" 
+                        placeholder="Your e-mail" 
+                        />
                       </label>
                     </li>
                     <li class="feedback-form__item">
                       <label class="feedback-form__label">
-                        <span>Send us a message</span>
+                        <span></span>
                         <textarea
                           class="feedback-field feedback-field__comment"
                           name="comment"
                           resize
+                          placeholder="Send us a message"
                           ></textarea>
-                          <!-- placeholder="Введіть текст" -->
                       </label>
                     </li>
                   </ul>
@@ -45,7 +48,7 @@
                       placeholder="feedback-offer"
                     />
                     <svg class="feedback-offer__icon">
-                      <use href="./images/feedback.svg#check_empty"></use>
+                      <use href="./images/feedback.svg#checkbox"></use>
                     </svg>
                     <div class="feedback-offer__text">
                       <span>I agree to the</span>
@@ -59,7 +62,7 @@
                       </a>
                     </div>
                   </label>
-                  <button class="button button--secondary" type="submit">
+                  <button class="button button--secondary feedback-form__button" type="submit">
                     SEND
                   </button>
                 </form>
