@@ -72,10 +72,13 @@
 
   &__link {
     white-space: nowrap;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.25;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba($primary-text-color, 0.3);
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
   }
 
   &__tel {

@@ -1,116 +1,118 @@
 // Руслан
 .faq {
-    &__item {
-        position: relative;
+  &__item {
+    position: relative;
 
-        padding: 24px 0px 24px 0px;
-        @media screen and (min-width: $tablet) {
-            padding: 24px 16px 24px 0px;
-        }
+    padding: 24px 0px 24px 0px;
+    @media screen and (min-width: $tablet) {
+      padding: 24px 16px 24px 0px;
     }
-    &__item::before {
-        content: '';
+  }
 
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        height: 2px;
+  &__item::before {
+    content: '';
 
-        background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 2px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__label::after {
+    content: '?';
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    line-height: 0.7;
+    color: $title-text-color;
+    @media screen and (min-width: $desktop) {
+      width: 42px;
+      height: 42px;
     }
-    &__label::after {
-        content: "?";
-        margin-left: auto;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__number {
+    margin-right: 16px;
+    font-family: 'Roboto Condensed';
+    font-size: 20px;
+    line-height: 0.7;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 32px;
-        height: 32px;
-        border-radius: 50%;
+    color: $title-text-color;
+    @media screen and (min-width: $desktop) {
+      margin-right: 32px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+  }
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-right: 10px;
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 600;
+      color: $title-text-color;
+    }
+  }
+  &__content-wrapper {
+    max-height: 0;
+    overflow: hidden;
 
-        cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.1);
-        font-size: 20px;
-        line-height: .7;
-        color: $title-text-color;
-        @media screen and (min-width: $desktop) {
-            width: 42px;
-            height: 42px;
-        } 
-    }
-    &__label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-    &__number {
-        margin-right: 16px;
-        font-family: 'Roboto Condensed';
-        font-size: 20px;
-        line-height: .7;
+    transition: max-height 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__content {
+    padding-top: 16px;
+    padding-left: 36px;
 
-        color: $title-text-color;
-        @media screen and (min-width: $desktop) {
-            margin-right: 32px;
-            font-size: 28px;
-            line-height: 1.25;
-        }
-    }
-    &__subtitle {
-        font-size: 14px;
-        line-height: 1.25;
-        font-weight: 400;
-        margin-right: 10px;
-        @media screen and (min-width: $tablet) {
-            font-size: 16px;
-            line-height: 1.45;
-        }
-        @media screen and (min-width: $desktop) {
-            font-size: 28px;
-            line-height: 1.25;
-            font-weight: 600;
-            color: $title-text-color;
-        }
-    }
-    &__content-wrapper {
-        max-height: 0;
-        overflow: hidden;
+    font-size: 12px;
+    line-height: 1.45;
 
-        transition: max-height 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: rgba(255, 255, 255, 0.8);
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
     }
-    &__content {
-        padding-top: 16px;
-        padding-left: 36px;
+    @media screen and (min-width: $desktop) {
+      padding-left: 60px;
 
-        font-size: 12px;
-        line-height: 1.45;
-
-            color: rgba(255, 255, 255, 0.8);
-        @media screen and (min-width: $tablet) {
-            font-size: 16px;
-        }
-        @media screen and (min-width: $desktop) {
-            padding-left: 60px;
-
-            font-size: 20px;
-        }
+      font-size: 20px;
     }
-    &__checkbox {
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;
-    }
+  }
+  &__checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 .faq__checkbox:checked + .faq__content-wrapper {
-    max-height: 100vh;
+  max-height: 100vh;
 }

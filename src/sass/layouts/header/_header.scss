@@ -3,210 +3,166 @@ $caubic: cubic-bezier(0.4, 0, 0.2, 1);
 $wait: 250ms;
 
 .header {
+  padding-top: 30px;
+  padding-bottom: 30px;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
-
-
-    @media screen and (min-width:768px) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    @media screen and (min-width:1440px) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+  @media screen and (min-width: 1440px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
-
-
 .nav {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .nav-flex {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 
-    @media screen and (min-width:1440px) {
-        --padding: 80px;
-
-
-    }
-
+  @media screen and (min-width: 1440px) {
+    --padding: 80px;
+  }
 }
-
-
 
 .nav-list {
+  display: none;
 
-    display: none;
-
-    @media screen and (min-width:1440px) {
-        display: flex;
-
-
-    }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
 }
-
-
-
-
 
 .nav-list__item:not(:last-child) {
-    @media screen and (min-width:1440px) {
-        margin-right: 77px;
-    }
+  @media screen and (min-width: 1440px) {
+    margin-right: 77px;
+  }
 }
 
-
 .mob-menu {
+  position: fixed;
+  top: -2px;
 
-    position: fixed;
-    top: -2px;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
 
-    z-index: 2;
-    width: 100vw;
-    height: 100vh;
+  background-color: $background-color;
 
-
-
-
-    background-color: $background-color;
-
-
-
-    @media screen and (min-width: 768px) {
-        box-shadow: 0px 20px 80px #000000;
-        height: 367px;
-    }
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 20px 80px #000000;
+    height: 367px;
+  }
 }
 
 .responsive {
-    padding-top: 26px;
+  padding-top: 26px;
 
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 
-    @media screen and (min-width: 768px) {
-        padding-top: 46px;
-    }
+  @media screen and (min-width: 768px) {
+    padding-top: 46px;
+  }
 }
 
 .mob-menu-list {
-    --padding: 40px;
-    padding-top: 60px;
+  --padding: 40px;
+  padding-top: 60px;
 
-
-
-    @media screen and (min-width: 768px) {}
-
-
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .mob-menu-list__item {
-    font-size: 14px;
-    line-height: 18px;
-    line-height: 1.25;
+  font-size: 14px;
+  line-height: 18px;
+  line-height: 1.25;
 
-    @media screen and (min-width: 768px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .mob-menu-list__item:not(:last-child) {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
-
-
-
 
 .menu-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 
+  background-color: transparent;
 
+  border: none;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+  }
 
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
 
-    background-color: transparent;
-
-    border: none;
-
-    cursor: pointer;
-
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-
-    @media screen and (min-width: 1440px) {
-        display: none;
-    }
-
-    &:hover,
-    &:focus {
-        color: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
 }
-
-
 
 .menu-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 
+  background-color: transparent;
 
-    background-color: transparent;
+  border: none;
 
-    border: none;
+  cursor: pointer;
 
-    cursor: pointer;
-
-
-
-    &:hover,
-    &:focus {
-        fill: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    fill: $primary-color;
+  }
 }
 
-
-
 .nav-list__link {
-    transition: color $wait $caubic;
+  transition: color $wait $caubic;
 
-    &:hover,
-    &:focus {
-        color: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
 }
 
 .mob-menu-list__link {
-    transition: color $wait $caubic;
+  transition: color $wait $caubic;
 
-    &:hover,
-    &:focus {
-        color: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
 }
 
 .mob-menu.is-hidden {
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
