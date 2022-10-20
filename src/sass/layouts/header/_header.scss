@@ -44,6 +44,7 @@
 
     width: 100%;
     height: 100vh;
+    padding-left: var(--padding);
     padding-top: 26px;
     padding-bottom: 100px;
 
@@ -62,10 +63,10 @@
 
 .site-nav__list {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: calc($mobile - var(--padding) * 2);
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    max-width: calc($tablet - var(--padding) * 2);
   }
   @media screen and (min-width: $desktop) {
     display: flex;
