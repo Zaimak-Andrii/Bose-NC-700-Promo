@@ -1,5 +1,62 @@
-<section>
-<div>
-    <!-- <h2 >Feedback</h2> -->
-</div>
+<section class="section feedback" id="feedback">
+  <div class=" container">
+    <div class="feedback__thumb">
+      <picture>
+        <source srcset="
+                        ./images/feedback-mobile.jpg    1x,
+                        ./images/feedback-mobile@2x.jpg 2x
+                      " type="image/jpeg" media="(max-width: 767px)" />
+        <source srcset="
+                        ./images/feedback-desktop.jpg    1x,
+                        ./images/feedback-desktop@2x.jpg 2x
+                      " type="image/jpeg" media="(min-width: 1440px)" />
+        <source srcset="
+                        ./images/feedback-tablet.jpg    1x,
+                        ./images/feedback-tablet@2x.jpg 2x
+                      " type="image/jpeg" media="(min-width: 768px)" />
+
+        <img class="feedback__image" src="./images/feedback-desktop@2x.jpg" alt="Woman in branded headphones works" />
+      </picture>
+    </div>
+
+    <div class="feedback__wrapper">
+
+      <div class="feedback__text-wrapper">
+        <h2 class="section__title">Feedback</h2>
+        <p class="section__subtitle feedback__subtitle">We'll help you find the right headphones for you.</p>
+      </div>
+
+
+      <form class="feedback-form">
+        <label class="feedback-form__label">
+          <input class="feedback-form__input" type="text" placeholder="Your name" />
+        </label>
+
+        <label class="feedback-form__label">
+          <input class="feedback-form__input" type="email" placeholder="Your e-mail" />
+        </label>
+
+        <label class="feedback-form__label">
+          <textarea class="feedback-form__area" name="comment" placeholder="Send us a message"></textarea>
+        </label>
+
+        <label class="feedback-form__label feedback-form__checkbox">
+          <input class="feedback-form__checkbox-input" type="checkbox" name="policy">
+          <span class="feedback-form__checkbox-check"></span>
+          <span class="feedback-form__label-text">
+            I agree to the
+            <a class="feedback-form__policy-link" href="#" rel="noreferrer noopener">
+              privacy policy
+            </a>
+          </span>
+        </label>
+
+        <button class="button button--secondary feedback-form__button" type="submit">
+          send
+        </button>
+      </form>
+
+    </div>
+
+  </div>
 </section>

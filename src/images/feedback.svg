@@ -1,0 +1,12 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="checkbox" viewBox="0 0 30 28">
+<title>checkbox</title>
+<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="30" height="28" stroke="white" stroke-opacity="0.8" stroke-width="3"/>
+<path d="M7 13L14.1916 20.1916C14.6195 20.6195 15.3265 20.5722 15.6936 20.0911L29.5 2" stroke-width="3" stroke-linecap="round"/>
+</svg>
+</symbol>
+
+</defs>
+</svg>
